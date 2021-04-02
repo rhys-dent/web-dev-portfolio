@@ -148,13 +148,13 @@ function App() {
                 <div className="intro-inner">
                   <img src="me-face.jpg" />
                   <div className="bio">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis, totam deserunt voluptates, dolor quaerat
-                    consequuntur ad quas, facere consequatur nemo recusandae
-                    quasi fugit dicta culpa nobis quisquam! Rerum veniam laborum
-                    sint culpa fuga minus iste ullam velit vel exercitationem
-                    numquam nihil cum cupiditate nisi voluptate cumque nemo,
-                    fugit facilis sapiente?
+                    Recent graduate from the Web and Application Development
+                    program at CDI College that is looking forward to gaining
+                    experience in this industry. I consider myself to be a
+                    Hardworking, focused, professional who is also an excellent
+                    team worker. I am particularly focused on web app frameworks
+                    like ReactJs and server-less backends like Amazon Web
+                    Services.
                   </div>
                 </div>
               </IntroS>
