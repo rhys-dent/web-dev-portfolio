@@ -7,6 +7,9 @@ const NeonLinkS = styled.div`
   transform: skew(2.5deg, 2.5deg);
   -webkit-transform: skew(2.5deg, 2.5deg);
   :hover {
+    .reflection {
+      opacity: 0.5;
+    }
     .text {
       text-shadow: 0 0 2px silver;
       color: whitesmoke;
@@ -20,23 +23,25 @@ const NeonLinkS = styled.div`
     color: transparent;
     text-shadow: 0 0 2px silver;
     z-index: 1;
-    transition: text-shadow 0.125s ease-in-out, color 0.125s ease-in-out;
+    transition: text-shadow 0.05s ease-in-out, color 0.05s ease-in-out;
   }
   .reflection {
     position: absolute;
     transform: rotate(180deg) scaleX(-1);
     top: 7vh;
-    opacity: 0.25;
+    opacity: 0.125;
+    color: darkgrey;
+    transition: opacity 0.05s ease-in-out;
   }
   .glow {
     color: transparent;
     text-shadow: 0 0 1px black;
-    transition: text-shadow 0.125s ease-in-out;
+    transition: text-shadow 0.05s ease-in-out;
   }
   .glow-reflection {
-    opacity: 0.5;
+    opacity: 0.125;
     z-index: -11;
-    text-shadow: 0 0 4px black;
+    text-shadow: 0 0 1px darkgrey;
   }
   a {
     text-decoration: none;

@@ -19,7 +19,7 @@ const HeaderS = styled.header`
     bottom: 0;
     height: 10vh;
     width: 90%;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
     transform: skewX(-70deg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
