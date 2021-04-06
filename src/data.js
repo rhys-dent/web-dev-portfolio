@@ -1,41 +1,70 @@
-const projects = [
-  { url: "http://prometheuspm.com/" },
-  { url: "https://master.dojb0il0pmvkq.amplifyapp.com/" },
+export const projects = [
+  {
+    url: "https://master.dojb0il0pmvkq.amplifyapp.com/",
+    src: "kanaquiz.jpg",
+    description:
+      "A simple web application intended to help to users memorize the Japanese alphabet. Both hiragana and katana.",
+    technologies: ["ReactJS", "Amplify (Amazon Web Service)"],
+  },
+  {
+    url: "http://prometheuspm.com/",
+    src: "prometheus-property-management.jpg",
+    description:
+      "A brochure website developed during my practicum to help promote my employer's property management to potential clients. ",
+    technologies: ["ReactJS", "Amplify (Amazon Web Service)"],
+  },
+  {
+    url: "https://master.d3tgrseuznqkr.amplifyapp.com/",
+    src: "tallycraft.jpg",
+    description:
+      "A single page website created to share my mother's crafting hobby in a catagorized and easy to navigate manner.",
+    technologies: [
+      "ReactJS",
+      "Amplify (Amazon Web Service)",
+      "Simple Storage Service (Amazon Web Service)",
+    ],
+  },
 ];
 
 export const resume = {
-  skills: [
-    "HTML5",
-    "CSS3",
-    "Javascript",
-    "React",
-    "Amazon Web Services",
-    "Effective Communicator and Team Worker",
-  ],
+  skills: {
+    major: [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "ReactJS",
+      "NoSQL",
+      "Amazon Web Services",
+      //"Effective Communicator and Team Worker",
+    ],
+    minor: [],
+  },
   education: [
     {
       title: "Web and Application Development",
       institution: "CDI College",
       start: "October 2019",
-      compeleted: "March 2020",
+      completed: "March 2020",
     },
     {
       title: "High School Diploma",
       institution: "Henry Wise Wood High School",
-      start: "October 2019",
-      compeleted: "March 2020",
+      start: "Septemeber 2004",
+      completed: "June 2007",
     },
   ],
   experience: [
     {
       title: 'Lime Scooter "Juicer"',
-      company: "Advantage Oil and Gas",
+      company: "Neutron Holdings, Inc",
       location: "Calgary, AB",
       start: "August 2019",
       end: "Present",
       description: [
-        "Reorganized several important well filing systems",
-        "Moved furniture, equipment, etc. for an office of approximately 40 people from the 3rd to 22nd floor",
+        "Collected and recharged scooters for the following day",
+        "Loaded and unloaded approximately 40 scooters per trip and completed 2 - 3 trips per night. Each scooter is either 30 lbs or 45 lbs, depending on the model",
+        "Worked long and late hours. Starting around 9:00 PM and finishing around 7:00 AM",
+        "Was responsible for my own schedule and hours",
       ],
     },
     {

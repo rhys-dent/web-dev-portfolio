@@ -5,7 +5,7 @@ const Contact = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 4rem;
   h1 {
     color: black;
     font-size: 2rem;
@@ -17,13 +17,15 @@ const Form = styled.form`
   width: min-content;
   margin: 0 auto;
   box-shadow: 0 0 4px black;
-  padding: 4vh;
+  padding: 0 4vh 4vh 4vh;
   height: min-content;
   input {
     width: 100%;
   }
   div input {
     width: 50%;
+  }
+  div textarea {
   }
 `;
 

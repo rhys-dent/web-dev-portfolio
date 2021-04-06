@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import NeonLink from "./NeonLink";
+
+export const headerHeight = 15; //vh
 const HeaderS = styled.header`
-  height: 15vh;
-
+  position: relative;
+  z-index: 9;
+  height: ${15}vh;
   padding: 0 4rem 0 4rem;
-
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
   .links {
     position: relative;
     z-index: 10;
