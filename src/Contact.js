@@ -34,6 +34,8 @@ export default function () {
     <Contact>
       <Form
         onSubmit={(e) => {
+          e.preventDefault();
+
           emailjs
             .sendForm(
               "service_u3dr8kd",
@@ -48,17 +50,21 @@ export default function () {
               (error) => {
                 console.log(error.text);
               }
-            );
+            )
+            .then(() => {
+              e.target.reset();
+            });
         }}
       >
         <div>
           <h1>Send me a message</h1>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Email" required />
         </div>
-        <input type="text" placeholder="Subject" />
+        <input type="text" placeholder="Subject" required />
         <br />
-        <textarea cols="100" rows="25"></textarea>
+        <textarea cols="100" rows="25" required></textarea>
+        <input type="submit" />
       </Form>
     </Contact>
   );
