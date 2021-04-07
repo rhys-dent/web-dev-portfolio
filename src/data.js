@@ -55,16 +55,30 @@ export const resume = {
   ],
   experience: [
     {
+      title: "Web Developer",
+      company: "Prometheus Poperty Management",
+      location: "Calgary, AB",
+      start: "February 2021",
+      end: "March 2021",
+      description: [
+        "Developed a responsive ReactJS website to help promote the business to property owners ",
+        "Loaded and unloaded approximately 40 scooters per trip and completed 2 - 3 trips per night. Each scooter is either 30 lbs or 45 lbs, depending on the model",
+        "Worked long and late hours. Starting around 9:00 PM and finishing around 7:00 AM",
+        "Was responsible for my own schedule and hours",
+      ],
+    },
+    {
       title: 'Lime Scooter "Juicer"',
       company: "Neutron Holdings, Inc",
       location: "Calgary, AB",
       start: "August 2019",
       end: "Present",
       description: [
-        "Collected and recharged scooters for the following day",
+        "Collected electric scooters from the downtown area in order to personally charge at my own home",
+        "Developed am efficient routine that allowed me to collect more scooters while the previous batch was charging",
         "Loaded and unloaded approximately 40 scooters per trip and completed 2 - 3 trips per night. Each scooter is either 30 lbs or 45 lbs, depending on the model",
         "Worked long and late hours. Starting around 9:00 PM and finishing around 7:00 AM",
-        "Was responsible for my own schedule and hours",
+        "Was entirely responsible for my own schedule and hours",
       ],
     },
     {

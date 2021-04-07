@@ -35,7 +35,6 @@ export default function () {
       <Form
         onSubmit={(e) => {
           e.preventDefault();
-
           emailjs
             .sendForm(
               "service_u3dr8kd",
