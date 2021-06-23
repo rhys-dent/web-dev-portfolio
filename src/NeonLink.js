@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NeonLinkS = styled.div`
   position: relative;
-  font-size: 4rem;
+  font-size: 4vw;
   transform: skew(2.5deg, 2.5deg);
   -webkit-transform: skew(2.5deg, 2.5deg);
   :hover {
@@ -21,7 +21,7 @@ const NeonLinkS = styled.div`
   .text {
     position: absolute;
     color: transparent;
-    text-shadow: 0 0 2px silver;
+    text-shadow: 0 0 .1vw silver;
     z-index: 1;
     transition: text-shadow 0.05s ease-in-out, color 0.05s ease-in-out;
   }

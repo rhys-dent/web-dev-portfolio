@@ -6,6 +6,7 @@ const HeaderS = styled.header`
   position: relative;
   z-index: 9;
   height: ${15}vh;
+  
   padding: 0 4rem 0 4rem;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
