@@ -123,12 +123,10 @@ function App() {
   });
   function onScroll(e) {
     const scrollTop = Math.round(scroller.current.scrollTop);
-
     setScrollPercent(scrollTop / scrollLimit);
 
-    scroller.current.style.backgroundPosition = `100% ${
-      (1 - scrollPercent) * 100
-    }%`;
+    scroller.current.style.backgroundPosition = `100% ${(1 - scrollPercent) * 100
+      }%`;
   }
   return (
     <OuterS>
