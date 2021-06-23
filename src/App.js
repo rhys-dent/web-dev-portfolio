@@ -141,13 +141,7 @@ function App() {
               <IntroS>
                 <div className="intro-inner">
                   <p className="bio">
-                    I am a recent graduate from the Web and Application
-                    Development program at CDI College and looking forward to
-                    begining my career in this industry. I consider myself to be
-                    a Hardworking, focused, professional who is also an
-                    excellent team worker. I am particularly focused on web app
-                    frameworks like ReactJs and server-less backends like Amazon
-                    Web Services.
+                    Welcome to my portfolio.
                   </p>
                 </div>
               </IntroS>
