@@ -1,12 +1,5 @@
 export const projects = [
   {
-    url: "https://master.dojb0il0pmvkq.amplifyapp.com/",
-    src: "kanaquiz.jpg",
-    description:
-      "A simple web application intended to help to users memorize the Japanese alphabet. Both hiragana and katana.",
-    technologies: ["ReactJS", "Amplify (Amazon Web Service)"],
-  },
-  {
     url: "http://prometheuspm.com/",
     src: "prometheus-property-management.jpg",
     description:
@@ -14,16 +7,24 @@ export const projects = [
     technologies: ["ReactJS", "Amplify (Amazon Web Service)"],
   },
   {
-    url: "https://master.d3tgrseuznqkr.amplifyapp.com/",
-    src: "tallycraft.jpg",
+    url: "https://master.dojb0il0pmvkq.amplifyapp.com/",
+    src: "kanaquiz.jpg",
     description:
-      "A single page website created to share my mother's crafting hobby in a catagorized and easy to navigate manner.",
-    technologies: [
-      "ReactJS",
-      "Amplify (Amazon Web Service)",
-      "Simple Storage Service (Amazon Web Service)",
-    ],
+      "A simple web application intended to help to users memorize the Japanese alphabet. Both hiragana and katana.",
+    technologies: ["ReactJS", "Amplify (Amazon Web Service)"],
   },
+ 
+  // {
+  //   url: "https://master.d3tgrseuznqkr.amplifyapp.com/",
+  //   src: "tallycraft.jpg",
+  //   description:
+  //     " A single page website created to share my mother's crafting hobby in a catagorized and easy to navigate manner.",
+  //   technologies: [
+  //     "ReactJS",
+  //     "Amplify (Amazon Web Service)",
+  //     "Simple Storage Service (Amazon Web Service)",
+  //   ],
+  // },
 ];
 
 export const resume = {

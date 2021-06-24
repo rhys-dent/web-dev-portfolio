@@ -25,7 +25,7 @@ const ScrollerS = styled.div`
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
-  background: linear-gradient(to right, black 20%, white 100%);
+  background: linear-gradient(to right, black 30%, white 100%);
 `;
 
 const IntroS = styled.div`
@@ -48,26 +48,32 @@ const IntroS = styled.div`
 `;
 
 const ProjectS = styled.div`
+  box-sizing: border-box;
   position: relative;
   z-index: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   color: whitesmoke;
-  height: min-content;
+  
   box-shadow: 0 0 8px black;
   border: 1px solid transparent;
-  width: 75%;
-  margin: 2rem auto;
+  
+  margin: 2rem 4rem;
   background-color: black;
-  padding: 2rem;
+  
   border-radius: 4px;
+  @media only screen and (max-width: 600px) {
+    display:block;
+  }
   img {
-    width: 75vh;
-    box-shadow: 0 0 12px black;
+    width:100%;
+    
+    box-shadow: 0 0 12px whitesmoke;
     outline: none;
     border: none;
   }
   div {
-    padding-left: 2rem;
+    padding: 1rem;
     p {
       font-size: 1.5rem;
     }
@@ -110,17 +116,7 @@ function App() {
   const [scrollLimit, setScrollLimit] = useState(0);
 
   let headerHeightPx;
-  useEffect(() => {
-    const scrollWidth =
-      scroller.current.offsetWidth - scroller.current.clientWidth;
-    headerHeightPx = header.current.getBoundingClientRect().height;
-    scroller.current.style.width = `calc(100vw + ${scrollWidth}px)`;
-    scroller.current.style.paddingTop = `${headerHeightPx}px`;
-    setScrollLimit(
-      scroller.current.scrollHeight - scroller.current.offsetHeight
-    );
-    console.log(scrollLimit);
-  });
+  
   function onScroll(e) {
     const scrollTop = Math.round(scroller.current.scrollTop);
     setScrollPercent(scrollTop / scrollLimit);
@@ -135,7 +131,7 @@ function App() {
           <Header />
         </HeaderS>
         <ScrollerS ref={scroller} onScroll={onScroll}>
-          <ScrollBar scrollPercent={scrollPercent} scrollLimit={scrollLimit} />
+          
           <Switch>
             <Route exact path="/">
               <IntroS>
@@ -150,7 +146,9 @@ function App() {
                   <a className="link-hover-message" href={project.url}>
                     <h2>Visit Site</h2>
                   </a>
-                  <img src={project.src} alt="" />
+                  <div>
+                    <img src={project.src} alt="" />
+                  </div>
                   <div>
                     <p className="context-text">{project.description}</p>
                     <h3>Created Using:</h3>

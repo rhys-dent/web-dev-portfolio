@@ -16,16 +16,19 @@ const Contact = styled.div`
 const Form = styled.form`
   width: min-content;
   margin: 0 auto;
+  margin-top: 4vh;
   box-shadow: 0 0 4px black;
   padding: 0 4vh 4vh 4vh;
   height: min-content;
   input {
     width: 100%;
+    border: 1px solid black;
   }
   div input {
     width: 50%;
   }
   div textarea {
+    height:25vh;
   }
 `;
 
@@ -62,7 +65,7 @@ export default function () {
         </div>
         <input type="text" placeholder="Subject" required />
         <br />
-        <textarea cols="100" rows="25" required></textarea>
+        <textarea cols="100" rows="15" required></textarea>
         <input type="submit" />
       </Form>
     </Contact>
