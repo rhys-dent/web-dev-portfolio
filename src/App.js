@@ -20,6 +20,7 @@ const HeaderS = styled.div`
 
 const ScrollerS = styled.div`
   --header-height: 10vh;
+  padding-top: 15vh;
   box-sizing: border-box;
   border: 0vh solid fuchsia;
   height: 100vh;
@@ -53,6 +54,7 @@ const ProjectS = styled.div`
   z-index: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
   color: whitesmoke;
   
   box-shadow: 0 0 8px black;
