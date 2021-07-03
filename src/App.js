@@ -116,7 +116,7 @@ function App() {
   const [scrollLimit, setScrollLimit] = useState(0);
 
   let headerHeightPx;
-  
+
   function onScroll(e) {
     const scrollTop = Math.round(scroller.current.scrollTop);
     setScrollPercent(scrollTop / scrollLimit);
@@ -131,16 +131,10 @@ function App() {
           <Header />
         </HeaderS>
         <ScrollerS ref={scroller} onScroll={onScroll}>
-          
+
           <Switch>
             <Route exact path="/">
-              <IntroS>
-                <div className="intro-inner">
-                  <p className="bio">
-                    Welcome to my portfolio.
-                  </p>
-                </div>
-              </IntroS>
+
               {projects.map((project) => (
                 <ProjectS>
                   <a className="link-hover-message" href={project.url}>
