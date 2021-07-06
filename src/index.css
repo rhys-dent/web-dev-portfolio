@@ -1,17 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 * {
-  box-sizing: border-box;
-  font-family: "Nunito";
-  text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Nunito";
+	text-decoration: none;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.webgl {
+	position: fixed;
+	z-index: -1;
+}
+
+main {
+	padding-top: 15vh;
 }

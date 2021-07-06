@@ -2,71 +2,30 @@ import { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import { Header, Resume, Contact, Footer } from "./";
-
-import ScrollBar from "./ScrollBar";
-
-const OuterS = styled.div`
-	box-sizing: border-box;
-	height: 100vh;
-	width: 100vw;
-	overflow-y: hidden;
-	overflow-x: hidden;
-`;
+import background from "./background";
 
 const HeaderS = styled.div`
-	position: absolute;
+	position: fixed;
+	z-index: 1;
 	width: 100%;
 `;
-
-const ScrollerS = styled.div`
-	--header-height: 10vh;
-	padding-top: 15vh;
-	box-sizing: border-box;
-	border: 0vh solid fuchsia;
-	height: 100vh;
-	width: 100vw;
-	overflow-y: scroll;
-	background: linear-gradient(to right, black 30%, white 100%);
+const GridView = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	margin: 4rem;
+	gap: 4rem;
+	height: max-content;
 `;
-
-const IntroS = styled.div`
-	width: 75%;
-	margin: 2rem auto;
-	.intro-inner {
-		display: flex;
-		background-color: rgba(0, 0, 0, 0.125);
-		justify-content: space-evenly;
-		align-items: center;
-		border-radius: 1vh;
-		box-shadow: 0 0 12px white;
-		padding: 4rem;
-		.bio {
-			font-size: 1.5rem;
-			color: whitesmoke;
-			text-shadow: 0px 0px 8px black;
-		}
-	}
-`;
-
 const ProjectS = styled.div`
 	box-sizing: border-box;
 	position: relative;
 	z-index: 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-
 	color: whitesmoke;
-
 	box-shadow: 0 0 8px black;
 	border: 1px solid transparent;
 
-	margin: 2rem 4rem;
-	background-color: black;
-
 	border-radius: 4px;
-	@media only screen and (max-width: 600px) {
-		display: block;
-	}
+
 	img {
 		width: 100%;
 
@@ -75,12 +34,18 @@ const ProjectS = styled.div`
 		border: none;
 	}
 	div {
-		padding: 1rem;
+		margin: 1rem;
 		p {
 			font-size: 1.5rem;
 		}
 		ul {
 		}
+	}
+	.text {
+		padding-left: 1rem;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.75);
+		box-shadow: 0 0 1rem black;
 	}
 	.link-hover-message {
 		opacity: 0;
@@ -104,64 +69,61 @@ const ProjectS = styled.div`
 		}
 	}
 	:hover {
-		.link-hover-message {
+		/* .link-hover-message {
 			opacity: 1;
+		} */
+		box-shadow: 0 0 12px whitesmoke;
+		img {
+			box-shadow: 0 0 4px whitesmoke;
 		}
+	}
+	:active {
+		box-shadow: 0 0 6px whitesmoke;
 	}
 `;
 
 function App() {
-	const header = useRef();
-	const scroller = useRef();
 	const [projects, setProjects] = useState([]);
+	const headerRef = useRef(null);
 	const projectsDataUrl =
 		"https://raw.githubusercontent.com/rhys-dent/web-dev-portfolio-projects/main/";
 	useEffect(function () {
+		background();
 		fetch(projectsDataUrl + "data.json")
 			.then((response) => response.json())
 			.then((data) => setProjects(data));
 	}, []);
-	const [scrollPercent, setScrollPercent] = useState();
-	const [scrollLimit, setScrollLimit] = useState(0);
 
-	let headerHeightPx;
-
-	function onScroll(e) {
-		const scrollTop = Math.round(scroller.current.scrollTop);
-		setScrollPercent(scrollTop / scrollLimit);
-
-		scroller.current.style.backgroundPosition = `100% ${
-			(1 - scrollPercent) * 100
-		}%`;
-	}
 	return (
-		<OuterS>
+		<div>
 			<Router>
-				<HeaderS ref={header}>
+				<HeaderS ref={headerRef}>
 					<Header />
 				</HeaderS>
-				<ScrollerS ref={scroller} onScroll={onScroll}>
+				<main>
 					<Switch>
 						<Route exact path="/">
-							{projects.map((project) => (
-								<ProjectS>
-									<a className="link-hover-message" href={project.url}>
-										<h2>Visit Site</h2>
-									</a>
-									<div>
-										<img src={projectsDataUrl + project.src} alt="" />
-									</div>
-									<div>
-										<p className="context-text">{project.description}</p>
-										<h3>Created Using:</h3>
-										<ul>
-											{project.technologies.map((technology) => (
-												<li>{technology}</li>
-											))}
-										</ul>
-									</div>
-								</ProjectS>
-							))}
+							<GridView>
+								{projects.map((project) => (
+									<ProjectS>
+										<a className="link-hover-message" href={project.url}>
+											<h2>Visit Site</h2>
+										</a>
+										<div>
+											<img src={projectsDataUrl + project.src} alt="" />
+										</div>
+										<div className="text">
+											<p>{project.description}</p>
+											<h3>Created Using:</h3>
+											<ul>
+												{project.technologies.map((technology) => (
+													<li>{technology}</li>
+												))}
+											</ul>
+										</div>
+									</ProjectS>
+								))}
+							</GridView>
 						</Route>
 						<Route path="/resume">
 							<Resume />
@@ -170,10 +132,10 @@ function App() {
 							<Contact />
 						</Route>
 					</Switch>
-					<Footer />
-				</ScrollerS>
+				</main>
+				<Footer />
 			</Router>
-		</OuterS>
+		</div>
 	);
 }
 
