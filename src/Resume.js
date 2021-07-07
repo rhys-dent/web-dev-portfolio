@@ -15,11 +15,7 @@ const Resume = styled.article`
 export default function () {
 	return (
 		<Resume>
-			<embed
-				src="resume.pdf#toolbar=1&navpanes=0&scrollbar=0"
-				width="100%"
-				height="100%"
-			/>
+			<embed src="rhys-dent-resume-generic.html" width="100%" height="100%" />
 		</Resume>
 	);
 }
