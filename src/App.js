@@ -11,9 +11,9 @@ const HeaderS = styled.div`
 `;
 const GridView = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin: 4rem;
-	gap: 4rem;
+	gap: 3rem;
 	height: max-content;
 `;
 const ProjectS = styled.div`
@@ -36,9 +36,13 @@ const ProjectS = styled.div`
 	div {
 		margin: 1rem;
 		p {
-			font-size: 1.5rem;
+			font-size: 1rem;
 		}
 		ul {
+			margin: 0;
+		}
+		h3 {
+			margin: 0;
 		}
 	}
 	.text {
