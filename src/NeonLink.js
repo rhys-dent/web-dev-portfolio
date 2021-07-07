@@ -20,8 +20,8 @@ const NeonLinkS = styled.div`
 	}
 	:active {
 		.text {
-			color: cadetblue;
-			text-shadow: 0 0 6px aliceblue;
+			color: grey;
+			text-shadow: 0 0 1px aliceblue;
 		}
 	}
 	.text {
