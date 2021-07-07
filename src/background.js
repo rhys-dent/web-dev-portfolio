@@ -1,5 +1,8 @@
 import * as THREE from "three";
 export default function () {
+	const loader = new THREE.TextureLoader();
+	const star = loader.load("star.png");
+
 	// Canvas
 	const canvas = document.querySelector("canvas.webgl");
 
@@ -22,16 +25,14 @@ export default function () {
 		size: 0.005,
 	});
 	material.color = new THREE.Color("aliceblue");
-	// const particlesMaterial = new THREE.PointsMaterial({
-	// 	size: 0.005,
-	// 	map: "Add loaded image here",
-	// 	transparent: true,
-	// 	color: "blue",
-	// 	blending: THREE.AdditiveBlending,
-	// });
+	const particlesMaterial = new THREE.PointsMaterial({
+		size: 0.01,
+		map: star,
+		transparent: true,
+	});
 
 	// Mesh
-	const particlesMesh = new THREE.Points(particlesGeometry, material);
+	const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
 
 	scene.add(particlesMesh);
 
