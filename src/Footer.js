@@ -27,12 +27,7 @@ export default function () {
 		<FooterS>
 			<div>
 				<h3>
-					<a
-						href="https://www.linkedin.com/in/rhys-dent-calgary
-"
-					>
-						LinkedIn
-					</a>
+					<a href="https://www.linkedin.com/in/rhys-dent-calgary">LinkedIn</a>
 				</h3>
 				<h3>
 					<a href="mailto:devRhysDent@gmail.com">devRhysDent@gmail.com</a>
@@ -42,9 +37,7 @@ export default function () {
 				<li>
 					<Link to={"/"}>Projects</Link>
 				</li>
-				<li>
-					<Link to={"/resume"}>Resume</Link>
-				</li>
+
 				<li>
 					<Link to={"/contact"}>Contact</Link>
 				</li>
