@@ -28,7 +28,7 @@ export default function () {
 			<div>
 				<h3>
 					<a
-						href="www.linkedin.com/in/rhys-dent-calgary
+						href="https://www.linkedin.com/in/rhys-dent-calgary
 "
 					>
 						LinkedIn
