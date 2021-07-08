@@ -30,9 +30,6 @@ const Form = styled.form`
 	div textarea {
 	}
 	@media only screen and (max-width: 1000px) {
-		div textarea {
-			columns: 30;
-		}
 	}
 `;
 
@@ -69,8 +66,8 @@ export default function () {
 				</div>
 				<input type="text" placeholder="Subject" required />
 				<br />
-				<textarea cols="50" rows="15" required></textarea>
-				<input type="submit" />
+				<textarea cols="30" rows="15" required></textarea>
+				<input type="submit" value="Send" />
 			</Form>
 		</Contact>
 	);

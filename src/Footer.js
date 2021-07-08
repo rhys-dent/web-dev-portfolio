@@ -9,15 +9,18 @@ const FooterS = styled.footer`
 	background-color: rgba(0, 0, 0, 0.75);
 	box-shadow: 0 0 8px whitesmoke;
 	color: whitesmoke;
+	font-size: 0.75rem;
+	h3,
+	li {
+		margin-top: 1vw;
+	}
 	a {
 		display: block;
 		color: whitesmoke;
-		font-size: 1.5rem;
 	}
 	ul {
 		list-style: none;
 		li {
-			font-size: 1.5rem;
 		}
 	}
 `;
@@ -37,7 +40,6 @@ export default function () {
 				<li>
 					<Link to={"/"}>Projects</Link>
 				</li>
-
 				<li>
 					<Link to={"/contact"}>Contact</Link>
 				</li>

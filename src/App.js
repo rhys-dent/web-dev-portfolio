@@ -12,7 +12,8 @@ const HeaderS = styled.div`
 const GridView = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	margin: 4rem;
+
+	margin: 0 auto;
 	gap: 2rem;
 	height: max-content;
 `;
@@ -23,7 +24,7 @@ const ProjectS = styled.div`
 	color: whitesmoke;
 	box-shadow: 0 0 8px black;
 	border: 1px solid transparent;
-
+	width: 100%;
 	border-radius: 4px;
 	img {
 		width: 100%;
