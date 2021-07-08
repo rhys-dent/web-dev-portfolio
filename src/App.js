@@ -13,7 +13,7 @@ const GridView = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin: 4rem;
-	gap: 3rem;
+	gap: 2rem;
 	height: max-content;
 `;
 const ProjectS = styled.div`
@@ -25,7 +25,6 @@ const ProjectS = styled.div`
 	border: 1px solid transparent;
 
 	border-radius: 4px;
-
 	img {
 		width: 100%;
 
@@ -35,14 +34,15 @@ const ProjectS = styled.div`
 	}
 	div {
 		margin: 1rem;
+		h3 {
+			margin-bottom: 0.5rem;
+		}
 		p {
 			font-size: 1rem;
+			margin-bottom: 0.25rem;
 		}
 		ul {
-			margin: 0;
-		}
-		h3 {
-			margin: 0;
+			font-size: 0.75rem;
 		}
 	}
 	.text {
@@ -116,9 +116,11 @@ function App() {
 										<div>
 											<img src={projectsDataUrl + project.src} alt="" />
 										</div>
+
 										<div className="text">
+											<h3>{project.title}</h3>
 											<p>{project.description}</p>
-											<h3>Created Using:</h3>
+											<h5>Created Using:</h5>
 											<ul>
 												{project.technologies.map((technology) => (
 													<li>{technology}</li>
