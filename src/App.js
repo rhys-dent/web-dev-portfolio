@@ -12,7 +12,7 @@ const HeaderS = styled.div`
 const GridView = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
+	width: 90%;
 	margin: 0 auto;
 	gap: 2rem;
 	height: max-content;
