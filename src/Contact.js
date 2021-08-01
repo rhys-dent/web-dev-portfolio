@@ -14,11 +14,9 @@ const Contact = styled.div`
 `;
 
 const Form = styled.form`
+	width: 60%;
 	margin: 0 auto;
-
 	box-shadow: 0 0 4px black;
-	height: min-content;
-	width: min-content;
 	text-align: center;
 	input {
 		width: 100%;
@@ -27,9 +25,18 @@ const Form = styled.form`
 	div input {
 		width: 50%;
 	}
-	div textarea {
+	input[type="submit"] {
+		display: inline-block;
+		width: 25%;
+		height: 50px;
+	}
+	textarea {
+		width: 100%;
 	}
 	@media only screen and (max-width: 1000px) {
+		div textarea {
+			width: 100vw;
+		}
 	}
 `;
 
@@ -61,12 +68,18 @@ export default function () {
 			>
 				<div>
 					<h1>Send me a message</h1>
-					<input type="text" placeholder="Name" required />
+					<input
+						type="text"
+						placeholder="Name"
+						name="from_name"
+						id="from_name"
+						required
+					/>
 					<input type="text" placeholder="Email" required />
 				</div>
-				<input type="text" placeholder="Subject" required />
+				<input type="text" placeholder="Subject" name="subject" required />
 				<br />
-				<textarea cols="30" rows="15" required></textarea>
+				<textarea cols="120" rows="10" name="message" required></textarea>
 				<input type="submit" value="Send" />
 			</Form>
 		</Contact>

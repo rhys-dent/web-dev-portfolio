@@ -6,7 +6,8 @@ const HeaderS = styled.header`
 	position: relative;
 	z-index: 9;
 	height: ${15}vh;
-	padding: 0 4rem 0 4rem;
+	width: 100%;
+	margin: 0 auto;
 	font-family: "Nunito", sans-serif;
 	font-weight: bold;
 	.links {
@@ -22,7 +23,7 @@ const HeaderS = styled.header`
 		position: absolute;
 		bottom: 0;
 		height: 10vh;
-		width: 90%;
+		width: 100%;
 		background-color: rgba(255, 255, 255, 0.25);
 		transform: skewX(-70deg);
 		backdrop-filter: blur(20px);
