@@ -4,7 +4,7 @@ import styled from "styled-components";
 const NeonLinkS = styled.div`
 	position: relative;
 
-	font-size: 6vw;
+	font-size: 4vw;
 	transform: skew(2.5deg, 2.5deg);
 	-webkit-transform: skew(2.5deg, 2.5deg);
 	:hover {
@@ -35,7 +35,7 @@ const NeonLinkS = styled.div`
 	.reflection {
 		position: absolute;
 		transform: rotate(180deg) scaleX(-1);
-		top: 4.5vw;
+		top: 3vw;
 		opacity: 0.125;
 		color: darkgrey;
 		transition: opacity 0.05s ease-in-out;

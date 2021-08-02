@@ -1,19 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import { Header, Resume, Contact, Footer } from "./";
+import { Header, About, Contact, Footer } from "./";
 import background from "./background";
 
 const HeaderS = styled.div`
-	position: fixed;
+	position: sticky;
+	top: -10vw;
 	z-index: 1;
 	width: 100%;
+	h1 {
+		text-align: center;
+		height: 10vw;
+		line-height: 10vw;
+		font-size: 6vw;
+		font-weight: bold;
+		color: whitesmoke;
+		text-shadow: 0 0 8px white;
+		box-shadow: 0 0 8px white;
+		margin-bottom: 1rem;
+	}
 `;
 const GridView = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	width: 90%;
-	margin: 0 auto;
+	margin: 4vw auto;
 	gap: 2rem;
 	height: max-content;
 `;
@@ -103,6 +115,7 @@ function App() {
 		<div>
 			<Router>
 				<HeaderS ref={headerRef}>
+					<h1>R h y s D e n t</h1>
 					<Header />
 				</HeaderS>
 				<main>
@@ -132,8 +145,8 @@ function App() {
 								))}
 							</GridView>
 						</Route>
-						<Route path="/resume">
-							<Resume />
+						<Route path="/about">
+							<About />
 						</Route>
 						<Route path="/contact">
 							<Contact />
