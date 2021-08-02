@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NeonLinkS = styled.div`
 	position: relative;
-
+	top: 0vw;
 	font-size: 4vw;
 	transform: skew(2.5deg, 2.5deg);
 	-webkit-transform: skew(2.5deg, 2.5deg);
@@ -27,6 +27,7 @@ const NeonLinkS = styled.div`
 	}
 	.text {
 		position: absolute;
+
 		color: transparent;
 		text-shadow: 0 0 0.1vw silver;
 		z-index: 1;

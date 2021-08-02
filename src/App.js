@@ -9,9 +9,12 @@ const HeaderS = styled.div`
 	top: -10vw;
 	z-index: 1;
 	width: 100%;
+	overflow-x: hidden;
 	h1 {
 		text-align: center;
 		height: 10vw;
+		width: 95%;
+		margin: 0 auto;
 		line-height: 10vw;
 		font-size: 6vw;
 		font-weight: bold;
