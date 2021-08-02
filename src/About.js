@@ -9,11 +9,26 @@ export default function () {
 		}
 		p {
 			padding-bottom: 1rem;
+			font-size: 1.25rem;
+		}
+
+		img {
+			width: max(200px, 33%);
+			margin: 1rem 1rem 1rem 0;
+			border-radius: 50%;
+			box-shadow: 0 0 1px white;
+		}
+		@supports (shape-outside: circle()) {
+			img {
+				shape-outside: circle();
+				shape-margin: 0.5rem;
+			}
 		}
 	`;
 	return (
 		<AboutS>
 			<h2>About Me</h2>
+			<img src="profile-photo-web.jpg" alt="" align="left" />
 
 			<p> Hello! Thank you for visiting my portfolio.</p>
 			<p>
@@ -30,15 +45,15 @@ export default function () {
 				web development needs.
 			</p>
 			<p>
-				My work experience outside of web development is broad and has given me
-				a broad set of skills. Most notably, I have worked construction outside
-				all year round as a subcontractor and as a line-cook/supervisor at a
-				very busy and fast paced restaurant. These experiences have taught me
-				how to maintain the right attitude, stay focused, stay productive, and
-				be an effective team member under stressful conditions. Currently my
-				free time is dedicated to street performing. Singing in public has
-				expanded my comfort zone and has helped tremendously with improving my
-				communication abilities.
+				My work experience outside of web development has given me a broad set
+				of skills. Most notably, I have worked construction outside all year
+				round as a subcontractor and as a line-cook/supervisor at a very busy
+				and fast paced restaurant. These experiences have taught me how to
+				maintain the right attitude, stay focused, stay productive, and be an
+				effective team member under stressful conditions. Currently my free time
+				is dedicated to street performing. Singing in public has expanded my
+				comfort zone and has helped tremendously with improving my communication
+				abilities.
 			</p>
 		</AboutS>
 	);

@@ -19,8 +19,11 @@ const Form = styled.form`
 	box-shadow: 0 0 4px black;
 	text-align: center;
 	input {
+		box-sizing: border-box;
 		width: 100%;
 		border: 1px solid black;
+		padding: 0.5vw;
+		margin-bottom: 0.5vw;
 	}
 	div input {
 		width: 50%;
@@ -66,17 +69,16 @@ export default function () {
 						});
 				}}
 			>
-				<div>
-					<h1>Send me a message</h1>
-					<input
-						type="text"
-						placeholder="Name"
-						name="from_name"
-						id="from_name"
-						required
-					/>
-					<input type="text" placeholder="Email" required />
-				</div>
+				<h1>Send me a message</h1>
+				<input
+					type="text"
+					placeholder="Name"
+					name="from_name"
+					id="from_name"
+					required
+				/>
+				<input type="text" placeholder="Email" required />
+
 				<input type="text" placeholder="Subject" name="subject" required />
 				<br />
 				<textarea cols="120" rows="10" name="message" required></textarea>
