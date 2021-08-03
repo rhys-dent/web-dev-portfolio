@@ -24,6 +24,19 @@ const HeaderS = styled.div`
 		margin-bottom: 1rem;
 	}
 `;
+const Testimonial = styled.div`
+	p {
+		font-style: italic;
+	}
+	background-color: rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 8px black;
+	padding: 2vw;
+	font-size: small;
+	font-weight: bold;
+	width: 80%;
+	margin: 2vw auto;
+	color: whitesmoke;
+`;
 const GridView = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,6 +135,25 @@ function App() {
 					<Header />
 				</HeaderS>
 				<main>
+					<Testimonial>
+						<p>
+							"Wow! Rhys was the greatest! He created a fantastic website for
+							our business from scratch. He worked incredibly hard to provide us
+							all of the functionality we required and produced a beautiful and
+							stylish finished product. He was more than willing to touch up all
+							of the minor details, through multiple revisions and polish the
+							website until it was perfect. He even put in some extra hours for
+							free just to get it just the way that we wanted it. He definitely
+							pays great attention to detail and takes real pride in his work. I
+							would recommend his services to anyone!"
+						</p>
+						<br />
+						<h3>Jason M Connolly</h3>
+						<h4>
+							VP Guest Relations at Sure Home Stays and Owner of Prometheus
+							Property Management
+						</h4>
+					</Testimonial>
 					<Switch>
 						<Route exact path="/">
 							<GridView>
