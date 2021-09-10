@@ -11,13 +11,13 @@ export default function () {
 
 	// Objects
 	const particlesGeometry = new THREE.BufferGeometry();
-	const particlesCnt = 8000;
-	const posArray = new Float32Array(particlesCnt * 3);
-	for (let i = 0; i < particlesCnt * 3; i++)
-		posArray[i] = (Math.random() - 0.5) * 5;
+	const particlesCount = 8000;
+	const positionArray = new Float32Array(particlesCount * 3);
+	for (let i = 0; i < particlesCount * 3; i++)
+		positionArray[i] = (Math.random() - 0.5) * 5;
 	particlesGeometry.setAttribute(
 		"position",
-		new THREE.BufferAttribute(posArray, 3)
+		new THREE.BufferAttribute(positionArray, 3)
 	);
 
 	// MATERIALS

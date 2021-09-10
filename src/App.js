@@ -157,27 +157,29 @@ function App() {
 					<Switch>
 						<Route exact path="/">
 							<GridView>
-								{projects.map((project) => (
-									<ProjectS>
-										<a className="link-hover-message" href={project.url}>
-											<h2>Visit Site</h2>
-										</a>
-										<div>
-											<img src={projectsDataUrl + project.src} alt="" />
-										</div>
+								{projects
+									.filter((project) => project.category != "tutorials")
+									.map((project) => (
+										<ProjectS>
+											<a className="link-hover-message" href={project.url}>
+												<h2>Visit Site</h2>
+											</a>
+											<div>
+												<img src={projectsDataUrl + project.src} alt="" />
+											</div>
 
-										<div className="text">
-											<h3>{project.title}</h3>
-											<p>{project.description}</p>
-											<h5>Created Using:</h5>
-											<ul>
-												{project.technologies.map((technology) => (
-													<li>{technology}</li>
-												))}
-											</ul>
-										</div>
-									</ProjectS>
-								))}
+											<div className="text">
+												<h3>{project.title}</h3>
+												<p>{project.description}</p>
+												<h5>Created Using:</h5>
+												<ul>
+													{project.technologies.map((technology) => (
+														<li>{technology}</li>
+													))}
+												</ul>
+											</div>
+										</ProjectS>
+									))}
 							</GridView>
 						</Route>
 						<Route path="/about">
