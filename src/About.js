@@ -28,7 +28,7 @@ export default function () {
 	return (
 		<AboutS>
 			<h2>About Me</h2>
-			<img src="profile-photo-web.jpg" alt="" align="left" />
+			<img src="linkedin-profile-web.jpg" alt="" align="left" />
 
 			<p> Hello! Thank you for visiting my portfolio.</p>
 			<p>
