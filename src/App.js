@@ -54,6 +54,12 @@ const ProjectS = styled.div`
 	border: 1px solid transparent;
 	width: 100%;
 	border-radius: 4px;
+	a {
+		color: white;
+	}
+	a:hover {
+		border: 2px solid white;
+	}
 	img {
 		width: 100%;
 
@@ -162,9 +168,16 @@ function App() {
 							<GridView>
 								{projects.map((project) => (
 									<ProjectS>
-										<a className="link-hover-message" href={project.url}>
+										<a href={project.url}>
 											<h2>Visit Site</h2>
 										</a>
+										{project.code ? (
+											<a href={project.code}>
+												<h2>Code</h2>
+											</a>
+										) : (
+											""
+										)}
 										<div>
 											<img src={projectsDataUrl + project.src} alt="" />
 										</div>
